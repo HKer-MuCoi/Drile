@@ -1,0 +1,61 @@
+/*================= 2.3, Footer =================*/
+.footer{
+    padding: 5rem 0;
+    margin-bottom: 5rem;
+    &__content{
+        @include d-flex(flex, center, space-between);
+        text-align: center;
+        &-text{
+            font-family: $font-Montserrat;
+            @include font-text(1.4rem, 500, $main__text-color);
+        }
+        &-logo{
+            cursor: pointer;
+            img{
+                width: 10rem;
+                display: block;
+                margin: auto;
+            }
+            .content-logo__awesome{
+                margin-top: 1.5rem;
+                font-size: 1.6rem;
+                i{
+                    padding: 0 1.5rem;
+                    color: $main__text-color;
+                }
+                .fa-facebook-f:hover{
+                    color: $hover-fb;
+                }
+                .fa-twitter:hover{
+                    color: $hover-twitter;
+                }
+                .fa-google-plus-g:hover{
+                    color: $hover-icon;
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width: 768px){
+    .footer .footer__content-text{
+        padding: 0 15px 0 0;
+    }
+}
+
+@media(max-width: 600px){
+    .footer{
+        margin: -50px 0;
+    }
+    .footer .footer__content{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer .footer__content-text{
+        margin-bottom: 15px;
+    }
+    .footer .footer__content-logo{
+        margin-bottom: 15px;
+    }
+}

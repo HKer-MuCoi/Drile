@@ -1,0 +1,73 @@
+/*================= 3.3, Banner =================*/
+.banner{
+    padding-bottom: 5rem;
+    &__img{
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        height: auto;
+        img{
+            width: 100%;
+            object-fit: contain;
+            transition: all 1s;
+            vertical-align:middle; 
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        &:hover img{
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
+    &__img-content{
+        position: absolute;
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: 4%;
+        transform: translate(0,-50%);
+        padding: 2rem;
+        .img-content__title{
+            @include font-text(1.6rem, 600, $black-color);
+            font-family: $font-Montserrat;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+        .img-content__description{
+            @include font-text(5rem, 700, $black-color);
+            font-family: $font-Montserrat;
+        }
+    }
+}
+
+@media(max-width: 1080px){
+    .banner .banner__img-content .img-content__title{
+        font-size: 14px;
+    }
+
+    .banner .banner__img-content .img-content__description{
+        font-size: 25px;
+    }
+    .banner .banner__img-content{
+        left: 0;
+    }
+}
+
+@media(max-width: 600px){
+    .banner .banner__img{
+        margin-top: 15px;
+    }
+}
+
+@media(max-width: 320px){
+    .banner .banner__img-content .img-content__title{
+        font-size: 12px;
+    }
+        
+    
+    .banner .banner__img-content .img-content__description{
+        font-size: 18px;
+    } 
+    
+}

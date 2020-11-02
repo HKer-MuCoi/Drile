@@ -1,0 +1,90 @@
+/*
+    Theme Name: Drile
+    Theme Description: Home work 29/09/2020
+    Version: 1.0.1
+    Author: Duc Thuy.
+*/
+
+
+/*
+    ==========TABLE OF CONTENT==========
+    1, Settings.
+        1.1, Reset.
+        1.2, Variable.
+    2, Layouts
+        2.1, Loader.
+        2.2, Header.
+        2.3, Footer.
+    3, Pages
+        3.1, Intro.
+        3.2, Partner.
+        3.3, Banner.
+        3.4, Products. 
+        3.5, Sale.
+        3.6, Newsletter. 
+        3.7, Instagram.
+*/
+
+/*================= 1.1, Reset =================*/
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    ::selection { 
+        background: #fe0;
+        color: #0c0c0c;
+        text-shadow: none;
+    }  
+}
+
+.ml_auto {
+    margin-left: auto;
+}
+
+.mr_auto {
+    margin-right: auto;
+}
+
+.mx_auto {
+    margin: 0 auto;
+}
+
+.owl-theme .owl-dots{
+	display: none;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+	display: none;
+}
+
+.container-fluid{
+    padding: 0 5rem;
+    @media (max-width: 1024px){
+        padding: 0 3rem;
+    }
+    @media (max-width: 600px){
+        padding: 0 1.5rem;
+    }
+}
+
+ul,li{
+    list-style: none;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+}

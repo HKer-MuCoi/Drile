@@ -1,0 +1,64 @@
+/*================= 3.1, Intro =================*/
+.intro{
+    padding: 10rem 0 0 0;
+    &__line{
+        border-bottom: 1px solid #ccc;
+    }
+    &__picture{
+        margin-top: 3rem;
+        position: relative;
+        cursor: pointer;
+        background-color: rgba(32,32,32,1);
+        overflow: hidden;
+        img{
+            width: 100%;
+            display: block;
+            opacity: 0.4;
+            transition: .5s;
+        }
+        .intro__picture-name{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            transition: all .5s;
+            .picture-name__link{
+                font-family: $font-Montserrat;
+                @include font-text(2.5rem, 700, $white-color);
+            }
+        }
+        &:hover img{
+            opacity: 1;
+            visibility: visible;
+        }
+        &:hover .intro__picture-name .picture-name__link{
+            animation: animation-name .4s ease-in;
+            opacity: 0;
+        }
+        @keyframes animation-name{
+            0%{
+                transform: scale(1);
+            }
+            90%{
+                opacity: 0.8;
+            }
+            100%{
+                opacity: 0;
+                transform: scale(4);
+            }
+        }
+        
+    }
+    @include breakpointminmax(320, 1024) { 
+        padding: 9rem 0 0 0;
+    }
+    @include max-breakpoint(320) { 
+        padding: 8rem 0 0 0;
+    }
+}

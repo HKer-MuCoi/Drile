@@ -1,0 +1,159 @@
+/*================= 3.5, Sale =================*/
+.sale{
+    &__img{
+        position: relative;
+        max-width: 100%;
+        cursor: pointer;
+        overflow: hidden;
+        margin:5rem 0;
+        img{
+            width: 100%;
+            vertical-align: middle;
+            object-fit: contain;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            transition: all 1s;
+        }
+        &:hover img{
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        &-content{
+            position: absolute;
+            top: 50%;
+            left: 9%;
+            z-index: 2;
+            bottom: auto;
+            transform: translate(0,-50%);
+            max-width: 60%;
+            text-align: center;
+            .img-content__opacity{
+                position: relative;
+                padding: 7rem 2rem;
+                .content__opacity-discount{
+                    position: absolute;
+                    font-size: 216px;
+                    line-height: 160px;
+                    color: #ed9fa6;
+                    font-family: $font-Montserrat;
+                    font-weight: 700;
+                    opacity: .2;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                }
+                .content__opacity-title{
+                    font-size: 17px;
+                    position: relative;
+                    color: var(--main-color-black);
+                    line-height: 22px;
+                    font-weight: 600;
+                    font-family: $font-Montserrat;
+                }
+                .content__opacity-sale{
+                    position: relative;
+                    z-index: 2;
+                    font-family: $font-Montserrat;
+                    font-weight: 700;
+                    line-height: 50px;
+                    font-size: 48px;
+                    margin-top: 5px;
+                }
+                .content__opacity-button{
+                    position: relative;
+                    margin-top: 7rem;
+                    .opacity-button__link{
+                        color: #fff;
+                        border: 1px solid black;
+                        background-color: black;
+                        padding: 1.5rem 4rem;
+                        font-family: $font-Montserrat;
+                        font-weight: 700;
+                        font-size: 14px;
+                        transition: .3s;
+                        &:hover{
+                            background-color: #EEEEEE;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .sale .sale__img-content .img-content__opacity .content__opacity-discount{
+        top: 0;
+        font-size: 100px;
+        height: 50%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sale .sale__img-content .img-content__opacity .content__opacity-title{
+        font-size: 15px;
+        width: 100%;
+        margin-left: 30px;
+        margin-bottom: -15px;
+    }
+    .sale .sale__img-content .img-content__opacity .content__opacity-sale{
+        font-size: 30px;
+        margin-left: 30px;
+        max-width: 100%;
+    }
+
+    .sale .sale__img-content .img-content__opacity .content__opacity-button{
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .sale .img-content__opacity .content__opacity-button .opacity-button__link{
+        padding: 5px 20px;
+    }
+}
+
+@media(min-width: 768px){
+    .sale__img-mobile{
+        display: none;
+    }
+}
+
+@media(max-width: 600px){
+    .sale__img-desktop{
+        display: none;
+    }
+    .sale__img-mobile{
+        order: 1;
+        overflow: hidden;
+        display: block;
+    }
+    .sale .sale__img-content{
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        transform: none;
+        text-align: center;
+        left: 4px;
+        background-color: transparent;
+        border-color: rgba(215,215,215,1);
+    }
+    .sale .sale__img-content .img-content__opacity{
+        background-color: #EFEFEF;
+        padding: 95px 15px;
+    }
+    .sale .sale__img-content .img-content__opacity .content__opacity-discount{
+        font-size: 120px;
+        left: 25%;
+        top: 30px;
+    }
+    .sale .sale__img-content .img-content__opacity .content__opacity-title{
+        margin: -20px 0;
+        font-size: 14px;
+        display: inline-block;
+    }
+    .sale .sale__img-content .img-content__opacity .content__opacity-sale{
+        margin: -5px;
+        display: inline-block;
+    }
+}

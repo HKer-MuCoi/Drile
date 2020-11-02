@@ -1,0 +1,130 @@
+/*================= 3.4, Product =================*/
+.product{
+    position: relative;
+    &__type{
+        margin-bottom: 1.5rem;
+        text-align: center;
+        padding: 1.5rem 0;
+        &-item{
+            padding: 1.5rem 3rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            @include font-text(1.4rem, 600, $grey-color);
+            text-transform: uppercase;
+            font-family: $font-Montserrat;
+            cursor: pointer;
+            transition: all .4s;
+            &:hover{
+                color: black;
+            }
+        }
+        .active_filter{
+            color: black;
+        }
+    }
+    &__img{
+        position: relative;
+        cursor: pointer;
+        img{
+            width: 100%;
+            display: block;
+        }
+        &-sale{
+            position: absolute;
+            top: 2%;
+            right: 4%;
+            border: 1px solid #9E0B0F;
+            background-color: #9E0B0F;
+            padding: .3rem 1.8rem;
+            @include font-text(1.5rem, 600, $white-color);
+            font-family: $font-Montserrat;
+        }
+        &-opacity{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all .25s ease-in-out;
+            visibility: hidden;
+            .img-opacity__icon{
+                position: absolute;
+                bottom: 30px;
+                right: 2%;
+                display: flex;
+                left: auto;
+                flex-direction: column;
+                align-items: center;
+                transition: all 1s ease-in-out;
+                .icon__eyes::after{
+                    position: absolute;
+                    background-color: black;
+                }
+                i{
+                    border: 1px solid black;
+                    background-color: #fff;
+                    height: 3.5rem;
+                    width: 3.5rem;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.6rem;
+                    text-align: center;
+                    justify-content: center;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        &:hover img{
+            opacity: 0;
+            visibility: visible;
+        }
+        &:hover .product__img-opacity img{
+            opacity: .3;
+            visibility: visible;
+        }
+        &:hover .product__img-opacity{
+            opacity: 1;
+            visibility: visible;
+        }
+        &-detail{
+            text-align: center;
+            padding: 2rem 0;
+            cursor: pointer;
+            .img-detail__name{
+                @include font-text(1.5rem, 400, $black-color);
+                margin-bottom: 1rem;
+                transition: .4s;
+                font-family: $font-Montserrat;
+                &:hover{
+                    color: $hover-text;
+                }
+            }
+            .img-detail__price{
+                display: flex;
+                justify-content: center;
+                font-family: $font-Montserrat;
+                font-size: 14px;
+            }
+            .line-through{
+                text-decoration: line-through;
+                margin-right: 10px;
+                color: $main__text-color;
+            }
+        }
+    }
+    .grid-item{
+        margin-bottom: 3rem;
+    }
+}
+
+@media(max-width: 1080px){
+    .product .product__type{
+        margin-top: -30px;
+    }
+}
+
+@media(max-width: 768px){
+    .product .product__type-item{
+        padding: 0 8px;
+    }
+}

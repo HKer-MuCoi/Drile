@@ -1,0 +1,42 @@
+/*================= 3.6, Newsletter =================*/
+.newsletter{
+    padding: 4.5rem 0;
+    &__content{
+        text-align: center;
+        &-title{
+            font-family: $font-Montserrat;
+            @include font-text(2.4rem, 700, $black-color);
+            margin-bottom: 1.5rem;
+        }
+        &-description{
+            @include font-text(1.4rem, 500, $main__text-color);
+            font-family: $font-Montserrat;
+            max-width: 36rem;
+            margin: auto;
+            line-height: 2.6rem;
+            margin-bottom: 2rem;
+        }
+        &-email{
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            position: relative;
+            padding: 2.5rem 0;
+            input[type="email"]{
+                width: 100%;
+                outline: none;
+                border: none;
+                color: #3a3a3a;
+                font-size: 1.4rem;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+            }
+            .content-email__submit{
+                position: absolute;
+                cursor: pointer;
+                top: 2.7rem;
+                right: 0;
+                color: black;
+            }
+        }
+    }
+}

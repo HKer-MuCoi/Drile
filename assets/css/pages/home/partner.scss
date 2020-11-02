@@ -1,0 +1,15 @@
+/*================= 3.2, Partner =================*/
+.partner{
+    padding: 10rem 0;
+    &__logo{
+        text-align: center;
+        img{
+            max-width: 17rem;
+            display: block;
+            margin: auto;
+        }
+    }
+    @include breakpointminmax(320, 768) { 
+        padding: 4rem 0;
+    }
+}

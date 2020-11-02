@@ -1,0 +1,27 @@
+/*================= 1.2, Variable =================*/
+$menu__text-color:rgba(112,112,112,1);
+$white-color: #fff;
+$black-color: #202020;
+$grey-color: #bdbdbd;
+$main__text-color: #707070;
+$sale__title-color:#EEDEE0;
+
+$hover-icon:#E30761;
+$hover-twitter:#2CAAE2;
+$hover-fb: #475998;
+$hover-text: #EAB294;
+
+$font-Montserrat: 'Montserrat', sans-serif;
+
+
+@mixin d-flex($display, $align-item, $justify-content){
+    display: $display;
+    align-items: $align-item;
+    justify-content: $justify-content;
+}
+
+@mixin font-text($size, $weight, $color){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
